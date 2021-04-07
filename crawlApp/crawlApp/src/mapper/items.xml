@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"	
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper	namespace="items">
+	<insert	id="insert"	parameterType="Item">
+		INSERT INTO items(name,category_no,price,review,review_num,img,regdate)
+		VALUES(#{name},#{categoryNo},#{price},#{review},#{reviewNum},#{img},#{regdate})
+			<selectKey keyProperty="no" resultType="Integer" order="AFTER">
+    			SELECT LAST_INSERT_ID()
+  			</selectKey>
+	</insert>
+	
+	<select id="select" resultType="Item">
+		SELECT no,name,category_no categoryNo,price,review,review_num reviewNum,regdate,img
+		FROM items
+	</select>
+	
+	
+</mapper>

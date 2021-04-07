@@ -1,0 +1,44 @@
+#items {
+  margin-top: 100px;
+  padding: auto;
+  background-color: #fff;
+}
+.items_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 30px auto;
+  position: relative;
+}
+.items_cover_img {
+  background-image: url('../../Image/cover.png');
+  background-size: 100% 100% ;
+  width: 1200px;
+  height: 50vh;
+}
+.items_scroll {
+  margin-bottom: 150px;
+}
+.items_scroll_icon, .items_scroll_comments {
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 20px;
+}
+.items_top_scroll {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  border-radius: 50%;
+  padding: 15px;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.08);
+  border: 1px solid darkgray;
+  background-color: #fff;
+}
+.items_top_scroll:hover {
+  opacity: 0.3;
+}
+.items_top_scroll_icon {
+  font-size: 30px;
+}
